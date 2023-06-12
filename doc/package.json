@@ -1,0 +1,12 @@
+{
+	"name": "smarty-admin-docs",
+	"scripts": {
+		"dev": "vitepress dev --config ./vite.config.ts",
+		"build": "vitepress build --config ./vite.config.ts",
+		"serve": "vitepress serve --config ./vite.config.ts"
+	},
+	"devDependencies": {
+		"vitepress": "0.22.4",
+		"vitepress-theme-demoblock": "1.4.2"
+	}
+}

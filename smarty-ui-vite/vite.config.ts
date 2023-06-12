@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { presetUno, presetAttributify, presetIcons } from "unocss";
-import Unocss from "unocss/vite";
+import unocss from "./config/unocss";
 import vueJsx from '@vitejs/plugin-vue-jsx'
 // https://vitejs.dev/config/
 const rollupOptions = {
@@ -16,20 +16,20 @@ const rollupOptions = {
 
 export default defineConfig({
   plugins: [
+  unocss(), 
     // 添加JSX插件
   vueJsx({
   
     }),
     
     vue(),
-    Unocss({
-      presets: [presetUno(), presetAttributify(), presetIcons()],
-    })
+   
   ],
  
   build: {
     rollupOptions,
     minify:false,
+    cssCodeSplit: true, 
     lib: {
       entry: "./src/entry.ts",
       name: "SmartyUI",
