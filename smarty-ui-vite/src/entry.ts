@@ -1,5 +1,4 @@
 import { App } from "vue";
-import "uno.css";
 import SFCButton from "./JSXButton";
 import JSXButton from "./JSXButton";
 import SButton from '../src/button/index'
